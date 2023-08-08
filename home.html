@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Number Generator</title>
+  <link rel="website icon" type="png" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Jamia_Hamdard_Logo.svg/800px-Jamia_Hamdard_Logo.svg.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <div class="container">
+      <div class="close-btn" onclick="goToIndexPage()">&times;</div>
+    <h1>Prime Number Generator</h1>
+    <p>Enter a range (start and end) to find all prime numbers within the range:</p>
+    <input type="number" id="start" placeholder="Start">
+    <input type="number" id="end" placeholder="End">
+    <button class="findbutton" onclick="findPrimes()">Find Primes</button>
+    <button onclick="savePrimes()">Save Primes</button>
+    <div class="prime-count" id="primeCount">Prime Count: 0</div>
+    <div class="timer" id="timer">Time Taken: 0 ms</div>
+    <div id="result"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
