@@ -64,7 +64,6 @@ function isPrime(num) {
   
     if (primes.length > 0) {
       resultDiv.innerHTML = `Prime numbers between ${start} and ${end}: `;
-      resultDiv.innerHTML = ``;
       primenumbers.innerHTML = `${primes.join(", ")}`
       updatePrimeCount(primes.length);
       updateTimer();
