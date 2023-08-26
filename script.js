@@ -30,8 +30,12 @@ function isPrime(num) {
     const end = parseInt(document.getElementById("end").value);
     const resultDiv = document.getElementById("result");
     const primenumbers = document.getElementById("result");
+
+    
   
     if (isNaN(start) || isNaN(end)) {
+      const utterance = new SpeechSynthesisUtterance("Please enter valid numbers for start and end.");
+    speechSynthesis.speak(utterance);
       resultDiv.innerHTML = "Please enter valid numbers for start and end.";
       updatePrimeCount(0);
       updateTimer();
@@ -39,6 +43,8 @@ function isPrime(num) {
     }
   
     if (start < 0 || end > 10000000) {
+      const utterance = new SpeechSynthesisUtterance("Please enter the valid range.");
+    speechSynthesis.speak(utterance);
       resultDiv.innerHTML = "Please enter a range between 0 and 10000000.";
       updatePrimeCount(0);
       updateTimer(); 
@@ -46,6 +52,8 @@ function isPrime(num) {
     }
   
     if (start >= end) {
+      const utterance = new SpeechSynthesisUtterance("End value must be greater than start value.");
+    speechSynthesis.speak(utterance);
       resultDiv.innerHTML = "End value must be greater than start value.";
       updatePrimeCount(0);
       updateTimer();
@@ -53,6 +61,8 @@ function isPrime(num) {
     }
   
     let primes = [];
+    const utterance = new SpeechSynthesisUtterance("Generating Response.");
+    speechSynthesis.speak(utterance);
   
     for (let i = start; i <= end; i++) {
       if (isPrime(i)) {
@@ -77,6 +87,9 @@ function isPrime(num) {
     
     const primes = document.getElementById("result").innerText;
     if( primes !=='' ){
+      const utterance = new SpeechSynthesisUtterance("Saving Prime Numbers.");
+    speechSynthesis.speak(utterance);
+
       const primesArray = primes.split(", ");
 
       let csvContent = "Prime Numbers\n";
